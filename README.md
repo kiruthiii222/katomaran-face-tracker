@@ -63,7 +63,8 @@ If PowerShell blocks activation, use Command Prompt and run `.venv\\Scripts\\act
 3. Save it as `models/yolov8n-face.pt`, or update `face_model_path` in `config.json` to your actual file path.
 4. InsightFace's `buffalo_l` model pack is typically downloaded automatically on first run. The first run therefore needs internet access. Model downloads can take time.
 
-The face model weights are not included in this repository. The exact YOLO face model filename can vary by source; ensure the downloaded model is compatible with Ultralytics YOLO.
+The YOLO face detection model weights are included in this repository at `models/yolov8n-face.pt`. The project uses Ultralytics YOLO for face detection and InsightFace for face embeddings and recognition. The model is loaded locally during execution.
+
 
 ## Run
 
@@ -176,7 +177,7 @@ git init
 git add .
 git commit -m "Build intelligent face tracker hackathon prototype"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/katomaran-face-tracker.git
+git remote add origin https://github.com/kiruthiii222/katomaran-face-tracker
 git push -u origin main
 ```
 
