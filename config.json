@@ -1,0 +1,15 @@
+{
+  "video_source": "sample_video.mp4",
+  "face_model_path": "models/yolov8n-face.pt",
+  "yolo_confidence": 0.45,
+  "detection_skip_frames": 2,
+  "recognition_threshold": 0.45,
+  "max_frames_lost": 15,
+  "min_face_size": 40,
+  "save_annotated_video": true,
+  "output_video_path": "output/annotated_video.mp4",
+  "database_path": "database/visitors.db",
+  "logs_dir": "logs",
+  "rtsp_reconnect_seconds": 3,
+  "show_window": true
+}

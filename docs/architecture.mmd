@@ -1,0 +1,15 @@
+flowchart TD
+    A[Video file / Webcam / RTSP] --> B[YOLO Face Detector]
+    B --> C[Face Crop]
+    C --> D[InsightFace Embedding]
+    D --> E{Match registered embedding?}
+    E -- Yes --> F[Existing face_id]
+    E -- No --> G[Register new visitor in SQLite]
+    G --> H[New face_id]
+    F --> I[IoU Tracker]
+    H --> I
+    I --> J[Entry / Exit Event Logger]
+    J --> K[SQLite visitors + events]
+    J --> L[Timestamped cropped images]
+    J --> M[events.log]
+    I --> N[Annotated video + visitor count]
